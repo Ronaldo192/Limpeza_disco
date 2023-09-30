@@ -10,7 +10,7 @@ ocupacao=$(df -h / | awk 'NR==2 {print $6}' | tr -d '%')
 Verifica se a ocupação está acima do limite definido
 if [ "$ocupacao" -gt "$limite_ocupacao" ]; then
     echo "A ocupação em disco está acima de $limite_ocupacao%."
-    echo "Executando 'docker system prune' para liberar espaço..."
+    echo "Executando comando para liberar espaço..."
 
     # Executa seu comando de limpeza
     # Executa comandos adicionais 
